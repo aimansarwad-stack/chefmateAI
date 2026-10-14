@@ -1,0 +1,341 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ChefMate AI – Technology One-Pager</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    background: #ffffff;
+    color: #1f2328;
+    padding: 36px 28px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  /* ── Header ── */
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border-bottom: 3px solid #e85d04;
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+  }
+  .header-icon {
+    font-size: 2.8rem;
+    line-height: 1;
+  }
+  .header-text h1 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: #e85d04;
+    letter-spacing: -.3px;
+  }
+  .header-text p {
+    font-size: .88rem;
+    color: #57606a;
+    margin-top: 2px;
+  }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .badge {
+    background: #fff3e8;
+    color: #c44b02;
+    border: 1px solid #ffd0a8;
+    border-radius: 20px;
+    padding: 2px 11px;
+    font-size: .75rem;
+    font-weight: 600;
+  }
+
+  /* ── Section title ── */
+  .section-title {
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #57606a;
+    margin-bottom: 10px;
+    margin-top: 22px;
+    border-left: 3px solid #e85d04;
+    padding-left: 8px;
+  }
+
+  /* ── Two-column grid ── */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+
+  /* ── Tech card ── */
+  .tech-card {
+    background: #f7f8fa;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 12px 14px;
+  }
+  .tech-card .label {
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: #57606a;
+    margin-bottom: 4px;
+  }
+  .tech-card .value {
+    font-size: .92rem;
+    font-weight: 600;
+    color: #1f2328;
+  }
+  .tech-card .sub {
+    font-size: .78rem;
+    color: #57606a;
+    margin-top: 1px;
+  }
+
+  /* ── Feature list ── */
+  .feature-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 16px;
+  }
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    font-size: .87rem;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f1f3;
+  }
+  .feature-item:nth-last-child(-n+2) { border-bottom: none; }
+  .check {
+    color: #2da44e;
+    font-size: .95rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ── Agent cards ── */
+  .agent-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 13px 16px;
+    background: #f7f8fa;
+  }
+  .agent-card h3 {
+    font-size: .9rem;
+    font-weight: 700;
+    color: #1f2328;
+    margin-bottom: 5px;
+  }
+  .agent-card p {
+    font-size: .82rem;
+    color: #57606a;
+    line-height: 1.5;
+  }
+  .agent-tag {
+    display: inline-block;
+    background: #e85d04;
+    color: #fff;
+    border-radius: 4px;
+    padding: 1px 7px;
+    font-size: .7rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  /* ── Dep table ── */
+  .dep-table { width: 100%; border-collapse: collapse; }
+  .dep-table th {
+    background: #f0f1f3;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: #57606a;
+    padding: 7px 10px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .dep-table td {
+    font-size: .86rem;
+    padding: 7px 10px;
+    border-bottom: 1px solid #f0f1f3;
+    vertical-align: top;
+  }
+  .dep-table tr:last-child td { border-bottom: none; }
+  .pkg { font-family: "Cascadia Code","Consolas",monospace; color: #e85d04; font-size: .84rem; }
+
+  /* ── Tagline ── */
+  .tagline {
+    margin-top: 22px;
+    background: #fff8f0;
+    border: 1px solid #ffd0a8;
+    border-left: 4px solid #e85d04;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: .88rem;
+    color: #7a4a1e;
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    margin-top: 28px;
+    padding-top: 12px;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+    font-size: .75rem;
+    color: #57606a;
+  }
+</style>
+</head>
+<body>
+
+  
+  <div class="header">
+    <div class="header-icon">🍽️</div>
+    <div class="header-text">
+      <h1>ChefMate AI – Intelligent Recipe Generator</h1>
+      <p>AI-powered culinary assistant built entirely on free, open-source tools</p>
+      <div class="badge-row">
+        <span class="badge">Python</span>
+        <span class="badge">Flask</span>
+        <span class="badge">Groq API</span>
+        <span class="badge">Bootstrap 5</span>
+        <span class="badge">JavaScript</span>
+        <span class="badge">Hackathon-Ready</span>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="section-title">Core Technology Stack</div>
+  <div class="grid-3">
+    <div class="tech-card">
+      <div class="label">Language</div>
+      <div class="value">Python 3.10+</div>
+      <div class="sub">Backend logic &amp; routing</div>
+    </div>
+    <div class="tech-card">
+      <div class="label">Web Framework</div>
+      <div class="value">Flask 3.x</div>
+      <div class="sub">Routes, sessions, JSON API</div>
+    </div>
+    <div class="tech-card">
+      <div class="label">AI Inference</div>
+      <div class="value">Groq API</div>
+      <div class="sub">Free, ultra-fast LLM inference</div>
+    </div>
+    <div class="tech-card">
+      <div class="label">LLM Model</div>
+      <div class="value">openai/gpt-oss-120b</div>
+      <div class="sub">Free tier — no credit card</div>
+    </div>
+    <div class="tech-card">
+      <div class="label">UI Framework</div>
+      <div class="value">Bootstrap 5.3</div>
+      <div class="sub">Responsive, mobile-first</div>
+    </div>
+    <div class="tech-card">
+      <div class="label">Markdown Render</div>
+      <div class="value">Marked.js</div>
+      <div class="sub">AI response → HTML in browser</div>
+    </div>
+  </div>
+
+  
+  <div class="section-title">AI Agents</div>
+  <div class="grid-2">
+    <div class="agent-card">
+      <div class="agent-tag">Agent 1</div>
+      <h3>🧠 Knowledge &amp; Nutrition Agent</h3>
+      <p>Answers cooking questions, explains food science, nutrition facts, flavour pairings, and practical tips across Indian &amp; global cuisines.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-tag">Agent 2</div>
+      <h3>🧺 Recipe &amp; Substitution Agent</h3>
+      <p>Generates structured recipes from available ingredients — with substitutions made, nutritional estimates (kcal, protein, carbs, fats), and a shopping list.</p>
+    </div>
+  </div>
+
+  
+  <div class="section-title">Frontend Technologies</div>
+  <div class="grid-3">
+    <div class="tech-card">
+      <div class="label">Icons</div>
+      <div class="value">Bootstrap Icons 1.11</div>
+      <div class="sub">2,000+ vector icons via CDN</div>
+    </div>
+    <div class="tech-card">
+      <div class="label">Typography</div>
+      <div class="value">Google Fonts</div>
+      <div class="sub">Playfair Display + Inter</div>
+    </div>
+    <div class="tech-card">
+      <div class="label">Scripting</div>
+      <div class="value">Vanilla JS (ES6+)</div>
+      <div class="sub">Fetch API, localStorage, DOM</div>
+    </div>
+  </div>
+
+  
+  <div class="section-title">Key Features Built</div>
+  <div class="feature-list">
+    <div class="feature-item"><span class="check">✓</span><span>Login &amp; Registration (Flask Sessions)</span></div>
+    <div class="feature-item"><span class="check">✓</span><span>Personalized Recipe Generator</span></div>
+    <div class="feature-item"><span class="check">✓</span><span>Recipe History (localStorage – last 10)</span></div>
+    <div class="feature-item"><span class="check">✓</span><span>Ingredient Substitution Engine</span></div>
+    <div class="feature-item"><span class="check">✓</span><span>Light / Dark Theme Toggle (persisted)</span></div>
+    <div class="feature-item"><span class="check">✓</span><span>Nutritional Facts per Serving</span></div>
+    <div class="feature-item"><span class="check">✓</span><span>Route Protection (@login_required)</span></div>
+    <div class="feature-item"><span class="check">✓</span><span>Shopping List Generation</span></div>
+    <div class="feature-item"><span class="check">✓</span><span>Password Strength Indicator</span></div>
+    <div class="feature-item"><span class="check">✓</span><span>Dietary Preference Filters</span></div>
+    <div class="feature-item"><span class="check">✓</span><span>Copy Recipe to Clipboard</span></div>
+    <div class="feature-item"><span class="check">✓</span><span>Fully Responsive – Mobile &amp; Desktop</span></div>
+  </div>
+
+  
+  <div class="section-title">Python Dependencies (requirements.txt)</div>
+  <table class="dep-table">
+    <thead>
+      <tr><th>Package</th><th>Version</th><th>Purpose</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="pkg">flask</span></td>
+        <td>≥ 3.0.0</td>
+        <td>Web server, routing, session management, template rendering</td>
+      </tr>
+      <tr>
+        <td><span class="pkg">groq</span></td>
+        <td>≥ 0.9.0</td>
+        <td>Official Groq Python SDK — LLM API calls</td>
+      </tr>
+      <tr>
+        <td><span class="pkg">python-dotenv</span></td>
+        <td>≥ 1.0.0</td>
+        <td>Loads GROQ_API_KEY and GROQ_MODEL from .env file</td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+  <div class="tagline">
+    "ChefMate AI is built with Python Flask, Groq API (free LLM), Bootstrap 5, and Vanilla JavaScript —
+    running entirely on open-source tools with zero paid services, in a single deployable file."
+  </div>
+
+  <div class="footer">Made with IBM Bob</div>
+
+</body>
+</html>
